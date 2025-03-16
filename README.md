@@ -1,4 +1,4 @@
-# ready_to_go_godot_project
+# ready_to_go_godot_4.4_project
 Godot project with my personal standard file structure, addons and settings.
 
 ## Included addons:
