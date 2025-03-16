@@ -11,5 +11,5 @@ Godot project with my personal standard file structure, addons and settings.
 ## Other features:
 
 - Finite State Machine template
-- Music and SFX Buses
-- Screenshot button (alt+s)
+- Music and SFX Buses already added
+- Implemented Screenshot button (alt+s)
