@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://djehfv02brp3y"]
+
+[ext_resource type="Script" uid="uid://dux1xuljr7ms7" path="res://scripts/state_machine/state_machine_owner/state_machine_owner.gd" id="1_xb55t"]
+[ext_resource type="PackedScene" uid="uid://db312k8eb4ffa" path="res://scenes/state_machine/state_machine.tscn" id="2_xhuc0"]
+[ext_resource type="Script" uid="uid://bpi72vtrn01sk" path="res://scripts/state_machine/state_machine_owner/states/state_machine_owner_state_1.gd" id="3_sqyra"]
+[ext_resource type="Script" uid="uid://c5xj1uoxtejsj" path="res://scripts/state_machine/state_machine_owner/states/state_machine_owner_state_2.gd" id="4_uwdax"]
+[ext_resource type="Script" uid="uid://csubj0ybaqpui" path="res://scripts/state_machine/state_machine_owner/states/state_machine_owner_state_3.gd" id="5_vvo5w"]
+
+[node name="StateMachineOwner" type="Node"]
+script = ExtResource("1_xb55t")
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("default_state") instance=ExtResource("2_xhuc0")]
+default_state = NodePath("StateMachineOwnerFirstState")
+debug_mode = true
+
+[node name="StateMachineOwnerFirstState" type="Node" parent="StateMachine"]
+script = ExtResource("3_sqyra")
+
+[node name="StateMachineOwnerSecondState" type="Node" parent="StateMachine"]
+script = ExtResource("4_uwdax")
+
+[node name="StateMachineOwnerThirdState" type="Node" parent="StateMachine"]
+script = ExtResource("5_vvo5w")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://db312k8eb4ffa"]
+
+[ext_resource type="Script" uid="uid://dkhwlol1dqn3f" path="res://scripts/state_machine/state_machine.gd" id="1_rbx0i"]
+[ext_resource type="Script" uid="uid://5svvkig37t7m" path="res://scripts/state_machine/state_base.gd" id="2_osv7c"]
+
+[node name="StateMachine" type="Node" node_paths=PackedStringArray("default_state")]
+script = ExtResource("1_rbx0i")
+default_state = NodePath("StateBase")
+debug_mode = false
+
+[node name="StateBase" type="Node" parent="."]
+script = ExtResource("2_osv7c")
